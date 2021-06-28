@@ -1,0 +1,163 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: black;
+  width:100%;
+  height:70px;
+  position:fixed;
+  top:0;
+  padding:10px 30px;
+  border-radius: 5px;
+  color:white;
+}
+
+.navbar img {
+  width: 45px;
+  height:45px;
+  background-color:white;
+
+}
+
+
+.navbar a {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 28px;
+}
+
+.navbar ul {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color:white;
+  padding:20px 20px;
+}
+
+
+.background-thor {
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-thor::before {    
+  content: "";
+  background-image: url('chris-hemsworth-poster-thor-infinity-war-1-618x360.jpeg');
+  background-size: cover;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+ 
+}
+
+.thor {
+  position: absolute;
+  color: black;  
+  font-size: 5rem;
+  margin-top:100px;
+margin-right: 700px;
+}
+
+.text{
+  position: relative;
+  margin-top:400px;
+  margin-right:650px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+width:600px;
+height:70px;
+  
+}
+
+
+
+@media only screen and (max-width: 1024px)
+{
+  .thor {
+    margin-top:100px;
+  margin-right:40px;
+  }
+
+  .text{
+
+    margin-top:400px;
+    margin-right:40px;
+ 
+    
+  }
+
+}
+
+@media only screen and (max-width: 375px)
+{
+  .navbar {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: black;
+    width:100%;
+    height:70px;
+    position:fixed;
+    top:0;
+    padding:5px 5px;
+    border-radius: 5px;
+    color:white;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 5px;
+    font-size: 16px;
+  }
+
+  .navbar img {
+    width: 25px;
+    height:25px;
+   
+  
+  }
+
+
+  .thor {
+  display: none;
+ 
+  }
+  
+  .text{
+    position: relative;
+    top:30px;
+    margin-top:0px;
+    margin-right:10px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  width:200px;
+  height:70px;
+    
+  }
+
+}

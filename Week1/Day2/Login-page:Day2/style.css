@@ -1,0 +1,159 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.left {
+  left: 0;
+  background-color: whitesmoke;
+}
+
+
+.right {
+  right: 0;
+  background-color: rgba(128, 0, 128, 1.0);
+  color:whitesmoke;
+}
+
+form {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-text {
+  margin-top:100px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.input-text {
+  width: 500px;
+  height:40px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin: 10px 100px;
+}
+
+.chexbox {
+  display:flex;
+  align-items: center;
+  margin: 10px 100px;
+
+}
+
+label {
+  margin-left:3px;
+}
+
+.forgot-text {
+  display:inline-block;
+  text-align: right;
+  flex-direction: row;
+  margin-left:230px;
+
+}
+
+.btn-login {
+  margin: 10px 100px;
+  width: 500px;
+  height:40px;
+  background:#904690;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.btn-login:hover {
+  background-color:#5c235c;
+}
+
+
+h3 {
+  width: 70%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 30px 100px 50px; 
+} 
+
+h3 span { 
+   background:whitesmoke; 
+   padding:0 10px; 
+}
+
+
+
+.icons {
+display: flex;
+justify-content: space-evenly;
+color:#CCCCCC;
+}
+
+
+footer p {
+  margin: 140px 310px;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -70%);
+  text-align: center;
+}
+
+
+
+
+
+.centered i {
+ color:whitesmoke;
+}
+
+.btn-register {
+  margin: 10px 100px;
+  width: 200px;
+  height:40px;
+  background-color:#660066;
+  color: white;
+  border: 2px solid white;
+  padding: 5px 5px;
+  display: inline-block;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.btn-register  i {
+ padding-left:20px;
+ color: white;
+}
+
+.right-text {
+  margin: 10px 10px;
+  font-size: 40px;
+}
