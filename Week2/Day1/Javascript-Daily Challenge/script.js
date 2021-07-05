@@ -2,7 +2,7 @@
 //Daily Challenge Exercise 1//
 
 let fruits = ["Banana", "Apples", "Oranges", "Blueberries"];
-fruits.splice(0,1);
+fruits.shift();
 console.log(fruits);
 fruits.sort();
 console.log(fruits);
