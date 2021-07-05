@@ -36,17 +36,17 @@ let lastresult= alert(`The result is ${resultofNumbers}`);
 
 
 function findNemo (sentence) {
-
-  let findIndex= sentence.split(" ").indexOf("Nemo")+1;
-  console.log(findIndex)
+  let findIndexArray= sentence.split(" ");
+  console.log(findIndexArray);
+  let findIndex= findIndexArray.indexOf("Nemo");
+  console.log(findIndex);
   if(findIndex >= 0){
-		return `I found Nemo at ${findIndex}!`;
-	}
-	return ("I can't find Nemo");
-  
+    return `I found Nemo at ${findIndex}!`;
+  } else {
+    return ("I can't find Nemo");
+  }
 }
-
-console.log(findNemo("My fish is called Nemo, I love it"));
+console.log(findNemo("My fish is called Nemo , I love it"));
 
 
 //Exercise 2//
