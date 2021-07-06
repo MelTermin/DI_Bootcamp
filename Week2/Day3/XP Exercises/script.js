@@ -2,7 +2,7 @@
 let colorCounter= 0;
 let colors = ["blue"," red", "green","violet"];
 
-for (let i=0; i<colors.length-1; i++) {
+for (let i=0; i<colors.length; i++) {
   colorCounter++
   console.log(` My #${colorCounter} choice is ${colors[i]}`  )
 }
