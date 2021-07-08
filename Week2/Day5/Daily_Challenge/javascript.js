@@ -1,27 +1,37 @@
-//Couldn't complete the challenge unfortunely//
+
 let userInput=parseInt(prompt("Please enter a number"));
 let word="bottles";
 
-let countTakeDown=0;
+let countIncrementor=0;
 
-//let newCount= userAnswerCount-countTakeDown;
-//console.log(newCount)
 
 while (userInput>=1) {
- countTakeDown++;
- console.log("userNumber",userInput)
- console.log("countincrement", countTakeDown)
+  countIncrementor++;
+if (countIncrementor==1) {
+  console.log(`${userInput} bottles of beer on the wall`);
+  console.log(`${userInput} bottles of beer`);
+  console.log(`Take ${countIncrementor},pass it around`);
 
- let currentNumber= userInput-(countTakeDown);
- console.log("currentNumber", currentNumber)
+ 
+  userInput= userInput-(countIncrementor);
+}else {
+
+console.log(`${userInput} bottles of beer on the wall`);
+ console.log(`${userInput} bottles of beer`);
+ console.log(`Take ${countIncrementor},pass them around`);
 
 
+ userInput= userInput-(countIncrementor);
+ 
+}
 
 
+if(userInput-countIncrementor<=0) {
+  console.log(`${userInput} bottles of beer on the wall`)
+  break;
+ 
   
-
-userInput--;
-  
+}
 }
 
 
