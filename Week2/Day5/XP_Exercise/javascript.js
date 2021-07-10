@@ -42,7 +42,7 @@ function test (userNumber,computerNumber, guessedTimes) {
 
 test();
 
-let input=0;
+
 
 
 
