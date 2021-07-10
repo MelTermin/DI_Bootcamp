@@ -16,6 +16,8 @@ body {
  margin-top:30px;
  font-size: 20px;
  font-weight: bolder;
+
+ 
 }
 
 .container {
@@ -87,30 +89,26 @@ nav a:hover {
 }
 
 .social-media-links li a {
- 
-  width: 60px;
-  height:50px;
   color: #fff;
-  background-color:	#68bbb6;
   display: block;
   text-align: center;
  position: relative;
-border-radius: 5px;
+
 }
 
 .social-media-links li a span {
   position: absolute;
-  top:0;
-  left:-120px;
-  width: 120px;
+  top:29px;
+  left:-20px;
+  width: 150px;
   height: 50px;
   color: #000;
-  background: #fff;
   font-size: 13px;
   z-index: -1;
   opacity: 0;
   backface-visibility: hidden;
   transition: 0.5s;
+
 }
 
 .social-media-links li:hover span {
@@ -124,6 +122,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
+  
 
 }
 
@@ -149,6 +148,7 @@ span {
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
 	border-radius: 10px;
 	overflow: hidden;
+  margin-right: 30px;
  
 }
 
@@ -168,6 +168,7 @@ span {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 20px;
+
 	box-sizing: border-box;
 	
 }
@@ -192,4 +193,168 @@ span {
 .btn-project:hover {
   background-color: #434994;
 }
+
+/*education part*/
+
+.education-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  margin-left: 30px;
+
+
+}
+
+.timeline {
+  width: 100%;
+  position: relative;
+
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color:
+  #545454;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color:black;
+}
+
+/*Contact form*/
+.container-3 {
+  display: flex;
+  /*border: 2px solid seagreen*/
+}
+
+form {
+  /*border: 2px solid red;*/
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+ 
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.input-text {
+  width: 500px;
+  height:40px;
+  border: 2px solid grey;
+  border-radius: 4px;
+ 
+}
+
+.contact-icons {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  /*border: 2px solid springgreen*/
+
+}
+
+.btn-login {
+  width: 200px;
+  height:40px;
+  background:#4076D6;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+.text {
+text-align: center;
+}
+
+
+/*Media Queries for timeline*/
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: #a7216e;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #a7216e;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: aqua;
+  }
+}
+
 
