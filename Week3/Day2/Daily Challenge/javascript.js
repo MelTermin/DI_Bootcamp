@@ -49,4 +49,3 @@ function shuffle() {
     span.innerHTML = newSent
 }
 
-//I couldnt shuffle it//
