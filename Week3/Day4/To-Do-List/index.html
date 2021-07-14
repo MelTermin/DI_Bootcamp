@@ -11,23 +11,15 @@
 <body>
   <div class="main-container">
   <div class="title">Melissa's To-Do List</div>
+  <br>
   <div class="main-input">
-    <input type="text">
-    <button><i class="fas fa-plus"></i></button>
+    <input type="text" class="input-text">
+    <button class="add-btn"><i class="fas fa-plus "></i></button>
   </div>
+  
   <div class="todo-container">
-  
-    <div class="todo-item-container">
-      <ul class="todo-list">
-      <li>
-        <p>Melissa</p>
-        <button><i class="fas fa-check-square"></i></button>
-        <button><i class="fas fa-trash"></i></button>
-      </li>
-    </ul>
-    </div>
-
-  
+    <ul class="todo-list"></ul>
+    <button id="clear">Clear All</button>
   </div>
   </div>  
   <script src="javascript.js"></script>
