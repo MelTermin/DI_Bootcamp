@@ -26,48 +26,56 @@ const gameInfo = [
  ];
 
 
- gameInfo.forEach((name, index, arrayNames) =>arrayNames[index]=name.username +"!");
+// //  gameInfo.forEach((name, index, arrayNames) =>arrayNames[index]=name.username +"!");
 
- console.log(gameInfo)
-
-
- gameInfo.forEach((name, index, arrayScores) =>arrayScores[index]=name.score>5 ? name.score : "not bigger than five")
+// //  console.log(gameInfo)
 
 
-//Second way
+// //  gameInfo.forEach((name, index, arrayScores) =>arrayScores[index]=name.score>5 ? name.score : "not bigger than five")
 
-//  function score(element,index,array){
+
+// // //Second way
+
+// // //  function score(element,index,array){
  
-//   if(element.score>5) {
-//     console.log(`${element.username} = ${element.score}`)
+// // //   if(element.score>5) {
+// // //     console.log(`${element.username} = ${element.score}`)
     
-//   }else {
-//     console.log("you scored less")
-//   }
-// }
-//   // return(element.score>5  ? element.username : "You scored less") ;=>this somehow did not work
+// // //   }else {
+// // //     console.log("you scored less")
+// // //   }
+// // // }
+// // //   // return(element.score>5  ? element.username : "You scored less") ;=>this somehow did not work
  
 
-//  gameInfo.forEach(score);
+// // //  gameInfo.forEach(score);
 
 
-//Couldnt solve it with for eaxch 
-// let sum=0;
+// // //Couldnt solve it with for eaxch 
+// // // let sum=0;
 
-// gameInfo.forEach((name, index, arrayScores) =>arrayScores[index]=sum+ name.score)
+// // // gameInfo.forEach((name, index, arrayScores) =>arrayScores[index]=sum+ name.score)
+
+// // // console.log(sum)
+
+
+
+
+
+
+
+
+// let sum =0;
+// gameInfo.forEach(element => {
+//   sum+=element.score
+// })
 
 // console.log(sum)
 
+// //=> with for loop
+// // // let sum = 0;
+// // // for (var i = 0; i < gameInfo.length; i++) {
+// // //   sum += gameInfo[i].score
+// // // }
 
-
-
-let sum = 0;
-for (var i = 0; i < gameInfo.length; i++) {
-  sum += gameInfo[i].score
-}
-
-console.log(sum)
-
-
-
-
+// // // console.log(sum)
