@@ -3,7 +3,11 @@
 
 //Exercise 2//
 
-// const experiencePoints=experiencePoints() == true ? 10 : 1
+function winBattle(){
+  return true;
+}
+experiencePoints = () =>  winBattle ? 10 : 1
+console.log(experiencePoints())
 
 
 
@@ -32,13 +36,21 @@ colors.forEach(printColor)
 //Exercise 4 //
 
 let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-let ordinal = ["th","st","nd","rd","th","th","th"];
+let ordinal = ["th","st","nd","rd"];
 
+color.forEach((element, index) => {
+  if (index == 0) {
+      console.log(`#${index+1}${ordinal[1]} choise is ${element}`)
+  }else if (index  ==1) {
+      console.log(`#${index+1}${ordinal[2]} choise is ${element}`)
+  }else if(index  ==2){
+      console.log(`#${index+1}${ordinal[3]} choise is ${element}`)
+  } else{
+      console.log(`#${index+1}${ordinal[0]} choise is ${element}`)
+  }
 
-for(let i=0; i<color.length; i++) {
-  const colorNum= i+1
-console.log(colorNum+ordinal[i] + " " + "choice is"+ " " + color[i])
-}
+})
+
 
 //Exercise 5 //
 
@@ -49,19 +61,15 @@ function isString(value) {
 console.log(isString(1));
 
 
+//Exercise 6
 let bankAmount= 4000;
 
-let vatAmount= bankAmount*17/100;
+let vat=17/100;
 
-//Exercise 5
+
 let details =["+200", "-100", "+146", "+167", "-2900"]
 
-for (let i=0; i<details.length; i++) {
-  console.log(details[i])
-  console.log(details[i].includes("-"))
-  if(details[i].includes("+")){
-   console.log(vatAmount) 
-  }else {
-   console.log("You are in minus")
-  }
-}
+details.forEach((element, index, array ) => array[index]  = eval(element * 0.17 + element))
+console.log(details)
+details.forEach(element => bankAmount += element )
+console.log(`your money at the end of the month is: ${bankAmount}`)
