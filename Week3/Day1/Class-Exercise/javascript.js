@@ -46,3 +46,8 @@ console.log(document.getElementsByClassName("list")[0])
 console.log(document.getElementsByClassName("list")[1])
 
 //Change Attributes//
+
+
+
+
+
