@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+@import url('http://fonts.cdnfonts.com/css/sega-logo-font');
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+}
+.search-bar-container {
+  display: flex;
+  background: url("./images/circuit-pattern.png") ;
+  background-color:#20b2aa;
+  height:8%;
+
+}
+
+.main-title {
+  font-family: 'SEGA LOGO FONT', sans-serif;
+  font-size: 30px;
+  padding: 10px 130px;
+}
+
+input {
+  width:600px;
+  height: 30px;
+  margin: 10px 100px;
+  border:none;
+  border-radius: 2px;
+
+}
+
+.robo-display-area {
+  background-color: #e6eaec;
+  flex: 1;
+
+}
+
+#robot-card-contianer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.robot-images {
+  background-color: white;
+  width:200px;
+  height:200px;
+  border-radius: 100px;
+  margin:50px 100px;
+}
+
+.robot-name {
+  text-align: center;
+  font-size: 30px;
+  color:white;
+}
+
+.robot-email {
+  text-align: center;
+  color:white;
+}
+.card {
+  border-radius: 10px;
+  box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+  width:400px;
+  height:400px;
+  margin: 20px 60px;
+  background: url("./images/card-pattern.png") ;
+  background-color: black;
+  opacity: 1;
+}
