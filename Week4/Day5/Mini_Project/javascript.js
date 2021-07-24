@@ -97,13 +97,11 @@ const robots = [
 
   function searchRobots (filterValues,data) {
     let filteredRobot= [];
-
     for(let i=0; i<data.length; i++) {
-    
     let robotName= data[i].name.toLowerCase()
     if (robotName.includes(filterValues)) {
       filteredRobot.push(data[i])
-console.log(filteredRobot)
+    console.log(filteredRobot)
     }
     }
 
