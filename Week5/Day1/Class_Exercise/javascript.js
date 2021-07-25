@@ -23,47 +23,20 @@
 //=>
 
 
-let signUp=document.forms[0]
-console.log(signUp)
-
-let userName=document.getElementById("username")
-console.log(userName)
-
-let password=document.getElementById("password")
-
-signUp.addEventListener("submit", (event) => {
+const validate = (event)=> {
   event.preventDefault();
-  console.log("test")
-  console.log(userName.value)
-  console.log(password.value)
-
-
-  if(userName.value.length<4 && password.value.length<4) {
-    alert("it must be at least 4 characthers")
+  let username = document.getElementById("username").value;
+  console.log(username)
+  if (username.length < 4) {
+      alert("username must be at least 4 characters long");
+  } else {
    
-  }else {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-const params = Object.fromEntries(urlSearchParams.entries());
-console.log(params)
-
-
-for (const [key, value] of Object.entries(params)) {
-	let result=document.createElement("div")
-let userAnswer=document.createElement("p")
-userAnswer.innerText=`${key}: ${value}`;
-
-
-console.log(userAnswer)
-result.append(userAnswer)
-
-signUp.append(result)
-
-
+  }
 }
 
 
-  }
-})
 
 
 
+let form = document.forms[0];
+form.addEventListener("submit", validate);
