@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- I can see the input and text area value in query section -->
+  <form  method="GET">
+		<div>
+			<label for="username">What is your username</label>
+			<input type="text" name="username" id="username" placeholder="Your username">
+		</div>
+    <div>
+      <label>Comments</label>
+      <textarea id="comment" name="comment" type="text" ></textarea>
+
+    </div>
+    <button type="submit">SUBMIT</button>
+  </form> 
+
+<!-- I should suppose to see the values in the form data, I cant see it -->
+  <form  method="POST">
+		<div>
+			<label for="username">What is your username</label>
+			<input type="text" name="username" id="username" placeholder="Your username">
+		</div>
+    <div>
+      <label>Comments</label>
+      <textarea id="comment" name="comment" type="text" ></textarea>
+
+    </div>
+    <button type="submit">SUBMIT</button>
+  </form> 
+<script src="javascript.js"></script>
+</body>
+</html>
