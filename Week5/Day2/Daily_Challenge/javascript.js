@@ -13,6 +13,7 @@ function displayGif(event) {
   let form = document.forms[0];
   form.reset();
   xhr = new XMLHttpRequest();
+  console.log(xhr)
   xhr.open('GET', `https://api.giphy.com/v1/gifs/search?q=${input}&limit=1&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`);
   xhr.responseType = 'json';
   xhr.send();
@@ -33,7 +34,12 @@ const loadXml = () => {
   let image = document.createElement("img");
   image.setAttribute("src", source);
   
-  container.appendChild(image);
+  let p=document.createElement("p")
+  p.innerHTML=xhr.response["data"][0]["title"]
+
+  container.append(image,p);
+
+
   
   let deleteButton = document.createElement("button");
   
