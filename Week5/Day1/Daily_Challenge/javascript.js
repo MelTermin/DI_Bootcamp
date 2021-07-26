@@ -16,4 +16,4 @@ const sendDataHandler= (e) => {
   singUpForm.append(pag)
 }
 
-singUpForm.addEventListener("submit", sendDataHandler)
+singUpForm.addEventListener("submit", sendDataHandler)  
