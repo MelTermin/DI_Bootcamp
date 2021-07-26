@@ -11,6 +11,9 @@ const sendDataHandler= (e) => {
   let string = JSON.stringify({firstName, lastName});
   console.log(string);
   
+  let pag=document.createElement("p")
+  pag.innerHTML=string
+  singUpForm.append(pag)
 }
 
 singUpForm.addEventListener("submit", sendDataHandler)
