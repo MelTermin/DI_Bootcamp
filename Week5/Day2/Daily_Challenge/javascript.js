@@ -48,6 +48,7 @@ const loadXml = () => {
   deleteButton.addEventListener("click", () => {
    container.remove(image);
    container.remove(deleteButton);
+   input.value=" ";
   });
 }
 
