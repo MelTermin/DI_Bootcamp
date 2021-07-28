@@ -56,15 +56,59 @@
 
 // sentence();
 
+let btn= document.getElementById("btn");
 
+btn.addEventListener("click", nameHandler)
 let url = "http://random-word-api.herokuapp.com/word?number=1"
-async function requestGif () {
+
+let result1=document.getElementById("result")
+console.log(result1)
+
+
+async function nameHandler() {
+  try {
+  
   let fetched=await fetch(url)
+  if(fetched.status===200){
   let response=await fetched.json()
   console.log(response)
-
-
-let fetchedUser=await fetch("https://api.giphy.com/v1/gifs/random?tag=sun&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+  randomGifs(response)
+  
+}else {
+  throw new Error("not 200")
+}
+}catch(err) {
+  console.log("The error is", err)
+}
 }
 
-requestGif ()
+async function randomGifs (x) {
+let gif= await fetch('https://api.giphy.com/v1/gifs/random?tag=' +x+'&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My')
+console.log(gif)
+
+
+if (gif.status == 200) {
+  let response = await gif.json()
+  console.log(response)
+  let res = await response.data
+  console.log(res)
+  printGif(res,x)
+  // return response 
+} else{
+  throw new Error('not 200 status')
+}
+}
+
+
+function printGif(x) {
+  console.log(x.embed_url)
+let image= document.createElement("img")
+image.setAttribute('src', x.embed_url)
+console.log(image)
+
+result1.append(image)
+}
+
+
+
+
