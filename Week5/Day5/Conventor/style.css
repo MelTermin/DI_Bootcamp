@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(image/stockvault-simple-finance-background260820.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-container {
+  margin:300px 600px;
+}
+
+h1 {
+  margin:10px;
+  color:white
+}
+
+input {
+  width:290px;
+  height:20px;
+  border:none;
+  border-radius: 3px;
+}
+
+#btn {
+  width: 100px;
+  height:40px;
+  margin-top: 20px;
+  background: #67a2f1;
+  color: white;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  border:none;
+}
+
+#result {
+  margin-top:20px;
+  width: 300px;
+  height:40px;
+  background-color: white;
+  border-radius: 5px;
+}
