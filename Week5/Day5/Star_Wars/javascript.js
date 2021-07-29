@@ -62,7 +62,10 @@ loader.classList.add("hidden");
 
 })
 }catch(err) {
+  let errorMessage=document.createElement("p")
+  errorMessage.innerHTML="Oops can not the characther"
   console.log("The error is", err)
+  starWarsContainer.append(errorMessage)
 }
 
 }
