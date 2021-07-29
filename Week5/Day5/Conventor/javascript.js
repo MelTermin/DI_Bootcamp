@@ -59,9 +59,9 @@ for(let i=0; i<currencyArray.length; i++) {
 
 
 let amount = input.value
-let sourceFrom = select.value.substring(0,3);
+let sourceFrom = select.value;
 console.log(sourceFrom)
-let toCurrency = optionFrom.value.substring(0,3);
+let toCurrency = optionFrom.value;
 let url = `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${sourceFrom}&to_currency=${toCurrency}&apikey=H8U5465C73W24DRO`
 
 
