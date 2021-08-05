@@ -1,0 +1,13 @@
+label {
+display:block;
+}
+
+button {
+  display: block;
+}
+
+.items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
