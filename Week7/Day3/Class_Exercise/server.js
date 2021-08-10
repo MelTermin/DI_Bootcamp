@@ -20,7 +20,7 @@ const fs= require("fs")
 
 //appending to a file//
 
-// let text="melissushh";
+// let text=" melissushh";
 
 // fs.appendFile("./text.txt", text,(err)=> {
 //   if(err) {
