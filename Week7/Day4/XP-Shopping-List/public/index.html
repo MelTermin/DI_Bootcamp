@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>My Shopping List</title>
+</head>
+<body>
+  <h1>My Shopping List</h1>
+  <form onsubmit="sendData(event)">
+    <label>Shopping Item:</label> 
+    <input type="text" name="item" value="" id="item">
+    <label>Amount:</label> 
+    <input type="text" name="amount" value="" id="amount">
+   <button type="submit" name="" value="submit" > Submit</button>
+  </form>
+
+  <div id="display"></div>
+  <script src="javascript.js"></script>
+</body>
+</html>

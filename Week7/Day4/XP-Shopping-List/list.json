@@ -1,0 +1,74 @@
+[
+  {
+    "item": "apple",
+    "amount": "123"
+  },
+  {
+    "item": "mango",
+    "amount": "23"
+  },
+  {
+    "item": "apple",
+    "amount": "12"
+  },
+  {
+    "item": "apple",
+    "amount": "12"
+  },
+  {
+    "item": "mango",
+    "amount": "234"
+  },
+  {
+    "item": "cherry",
+    "amount": "31"
+  },
+  {
+    "item": "apple",
+    "amount": "21"
+  },
+  {
+    "item": "mango",
+    "amount": "123"
+  },
+  {
+    "item": "cherry",
+    "amount": "54"
+  },
+  {
+    "item": "mango",
+    "amount": "21"
+  },
+  {
+    "item": "mango",
+    "amount": "43"
+  },
+  {
+    "item": "apple",
+    "amount": "54"
+  },
+  {
+    "item": "apple",
+    "amount": "123"
+  },
+  {
+    "item": "apple",
+    "amount": "12"
+  },
+  {
+    "item": "mango",
+    "amount": "23"
+  },
+  {
+    "item": "apple",
+    "amount": "21"
+  },
+  {
+    "item": "mango",
+    "amount": "32"
+  },
+  {
+    "item": "mango",
+    "amount": "123"
+  }
+]
