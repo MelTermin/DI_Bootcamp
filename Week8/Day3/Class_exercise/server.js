@@ -18,6 +18,7 @@ app.get("/countries",(req,res)=>{
      .catch(e => {
        res.send({message:e.message})
      })
+     //array of object with country names + you can also the countries localhost:5000/countries to check if you are getting it
   })
 
   app.get("/cities/:id",(req,res)=>{

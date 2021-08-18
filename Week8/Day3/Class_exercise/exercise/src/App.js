@@ -7,7 +7,7 @@ class App extends React.Component  {
   constructor(){
     super();
     this.state = {
-      countries:[],
+      countries:[],//always check the api, I am getting an array I can check in the server side
       cities:[]
     }
   }
@@ -17,7 +17,8 @@ class App extends React.Component  {
     fetch('http://localhost:5000/countries')
     .then(res => res.json())
     .then(data => {
-     this.setState({countries:data})
+      // console.log(data)
+     this.setState({countries:data})//you need change data to call this function setState you call render. ComponentDidMount updates the data
     //  console.log({countries:data})
     
   })
@@ -36,6 +37,8 @@ handleChange = (event) => {
 
 
   render() {
+    console.log("countries", this.state.countries)//this will not be empty fills with data
+    //I can deconstruct it const {countries}:this.stare
   return (
     <div >
     <Countries countries= {this.state.countries}  handleChange={this.handleChange}></Countries>

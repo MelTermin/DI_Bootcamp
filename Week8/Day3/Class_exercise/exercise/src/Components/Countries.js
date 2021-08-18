@@ -7,7 +7,7 @@ const Countries = (props)=> {
       {
  countries.map((items) => {
    return(
-       <option value= {items.country_id} >{items.country}  </option>
+       <option value= {items.country_id} key= {items.country_id} >{items.country}  </option>
    )
   
  })

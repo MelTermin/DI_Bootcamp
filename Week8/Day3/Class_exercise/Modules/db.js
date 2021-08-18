@@ -13,12 +13,14 @@ const db = knex({
 
 const getAllCountries = () => {
   return db.select('country_id','country').from('country');
+//returning a promise
 }
 
 const getAllCities = (id) => {
   return db('city').where({
   country_id:id
   }).select('city_id','city')
+  //returning a promise
 }
 
 module.exports = {
