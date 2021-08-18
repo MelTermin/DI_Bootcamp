@@ -7,7 +7,7 @@ const Cities = (props)=> {
              {
                cities.map((items) => {
                 return(
-                    <option value= {items.city_id} >{items.city}  </option>
+                    <option value= {items.city_id} key= {items.city_id} >{items.city}  </option>
                 )
                
               })
