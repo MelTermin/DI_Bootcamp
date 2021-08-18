@@ -8,7 +8,8 @@ class App extends React.Component  {
     super();
     this.state = {
       countries:[],//always check the api, I am getting an array I can check in the server side
-      cities:[]
+      cities:[],
+      page:""
     }
   }
 
@@ -39,11 +40,12 @@ handleChange = (event) => {
   render() {
     console.log("countries", this.state.countries)//this will not be empty fills with data
     //I can deconstruct it const {countries}:this.stare
+
+
   return (
     <div >
-    <Countries countries= {this.state.countries}  handleChange={this.handleChange}></Countries>
-    <Cities cities= {this.state.cities} ></Cities>
-
+      <Countries countries= {this.state.countries}  handleChange={this.handleChange}></Countries>
+      <Cities cities= {this.state.cities} ></Cities>
     </div>
   );
 }
