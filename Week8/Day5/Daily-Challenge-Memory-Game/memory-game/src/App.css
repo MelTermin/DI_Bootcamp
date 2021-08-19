@@ -1,0 +1,31 @@
+.container {
+  margin: 50px;
+  display: inline-block;
+  border: 2px solid salmon;
+
+}
+
+
+.box {
+
+  max-width: 400px;
+  min-height: 200px;
+  box-shadow: 0px 1px 5px 3px steelblue;
+  padding: 20px;
+  border-radius: 5px;
+}
+.first-header {
+  display:flex;
+  justify-content: space-between;
+  background-color: #962fbf;
+  font-size: 20px;
+  padding: 20px;
+ 
+}
+
+.second-header {
+  margin: 20px;
+}
+
+
+
