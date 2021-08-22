@@ -30,8 +30,8 @@ const Shop = () => {
 const App= ()=> {
   return (
     <div >
-      <div className="container">
-      <nav className="nav nav-pills">
+      <div >
+      <nav >
         <NavLink exact className="nav-link" activeClassName="active" to="/">
           Home
         </NavLink>
