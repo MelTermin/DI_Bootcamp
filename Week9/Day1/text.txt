@@ -1,0 +1,28 @@
+for forms in React
+
+add name in the input also is the same in the state in the instructor
+
+this.state {
+  fname:"",
+  lname:""
+}
+
+
+<input name="lname" onChange= {this.handleChange}>
+
+handleChange= (e) => {
+  this.setsTATE({[e.target.name]:e.target.value})
+}
+
+
+redux is state management;
+instead of getting it from this.state => you will get it from props
+
+
+reducer is changing the state of the store
+
+action (is the dispatch is like a function ?)- reducer(this is returning new data) - store(puts the new data in the store)
+
+
+we can use redux for angular, javascript and other programing langugages
+to connet react to redux;
