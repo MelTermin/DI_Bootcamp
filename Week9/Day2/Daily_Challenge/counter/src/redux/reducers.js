@@ -5,6 +5,7 @@ const initState = {
 
 export const reducer = (state=initState,action={}) => {
   console.log('state', state);
+  console.log(action.type)
   switch (action.type) {
     case 'PLUS_ONE':
     return {...state, counter: state.counter + 1 }
