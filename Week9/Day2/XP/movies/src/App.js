@@ -1,10 +1,13 @@
-
+import React from 'react'
+import MovieDetails from './Components/MovieDetails'
+import MovieList from './Components/MovieList'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div >
-
+      <MovieList></MovieList>
+      <MovieDetails></MovieDetails>
     </div>
   );
 }

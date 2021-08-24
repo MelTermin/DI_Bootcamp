@@ -1,18 +1,27 @@
-const moviesReducer = () => {
-  return [
+
+let initialState = {
+  movies:[
       {title: 'Spider-Man: Homecoming', releaseDate: '05-07-2017', rating: 7.4,},
       {title: 'Aquaman', releaseDate: '12-07-2018', rating: 7,},
       {title: 'Black Panther', releaseDate: '02-13-2018', rating: 7.4,},
       {title: 'Avengers: Infinity War', releaseDate: '04-25-2018', rating: 8.3,},
       {title: 'Guardians of the Galaxy', releaseDate: '07-30-2014', rating: 7.9,},
-  ]
+  ],
+  movieNum:null
 }
 
-const selectedMovieReducer = (state = null, action) => {
+
+export const selectedMovieReducer = (state=initialState, action={}) => {
+  console.log(initialState, action.payload)
+
+  //the state is equals the initial state, action.payload will get the id
+  
   switch(action.type) {
       case 'MOVIE_SELECTED':
-          return action.payload
-      default:
-          return state;
+         return {...state, movieNum:action.payload}
+         default:
+         return {...state}
+
   }
+
 }

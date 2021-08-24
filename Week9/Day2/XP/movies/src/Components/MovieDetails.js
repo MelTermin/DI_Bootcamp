@@ -1,37 +1,37 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
-const MovieDetails = ({ selectedMovie }) => {
-    if(!selectedMovie) {
-        return (
-            <div className="details-container" style={{width: '70%'}}>
-                <h2>Movie</h2>
-                <div className="properties">
-                    <p>Select Movie</p>
+class MovieDetails extends React.Component {
+
+    render(){
+        const {movies, movieNum} =this.props;
+        if (movieNum) {
+            const{title, releaseDate, rating} = movies[movieNum]
+            return(
+                <div>
+                    <div>
+                    <h2>Movie Details</h2>
+                        <p>{title}</p>
+                        <p>{releaseDate}</p>
+                        <p>{rating}</p>
+                    </div>
                 </div>
-            </div>
-            
-        )       
-    }
-    else{
-        return (
+            )
+        }
+        else{
+            return(<div>
+                <h2>Movie Details</h2>
+            </div>)
+        }
         
-            <div className="details-container">
-                <h2>Movie</h2>
-                <div className="properties">
-                    <p>Title: {selectedMovie.title}</p>
-                    <p>Release Date: {selectedMovie.releaseDate}</p>
-                    <p>Rating: {selectedMovie.rating}</p>
-                </div>
-            </div>
-        )
+    }
+}
+const mapStateToProps = (state) =>{
+  console.log(state)
+    return{
+        movies:state.movies,
+        movieNum: state.movieNum
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        selectedMovie: state.selectedMovie
-    }
-}
-
-export default connect(mapStateToProps)(MovieDetails);
+export default connect(mapStateToProps,null)(MovieDetails);
