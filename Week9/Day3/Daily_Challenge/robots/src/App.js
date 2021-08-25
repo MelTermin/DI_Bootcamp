@@ -4,27 +4,26 @@ import {connect} from 'react-redux';
 import SearchBox from './Components/SearchBox';
 import CardList from './Components/CardList';
 import {setSearchField} from './redux/actions'
+import {fetchRobots} from './redux/actions'
 
 class App extends React.Component  {
   constructor(){
     super();
     this.state = {
-      robots: [],
+    
     }
 
   }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response=> response.json())
-      .then(users => {this.setState({ robots: users})});
+    this.props.fetchRobots();
   }
 
 
 
   render() {
-    const {robots}=this.state
-    const {searchField,onSearchChange}=this.props
+
+    const {searchField,onSearchChange,robots}=this.props
     const filteredRobots=robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase())
     })
@@ -42,15 +41,16 @@ class App extends React.Component  {
 
 const mapStateToProps = (state) => {
   return {
-   searchField: state.searchField
+   searchField: state.searchField,
+   robots: state.robots
    //in the reducer
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-   onSearchChange:(event) => dispatch(setSearchField(event.target.value))
-
+   onSearchChange:(event) => dispatch(setSearchField(event.target.value)),
+   fetchRobots: () => dispatch(fetchRobots())
   }
 }
 
