@@ -1,4 +1,5 @@
 import React from 'react';
+import Age from './Components/Age';
 import './App.css';
 
 class App extends React.Component  {
@@ -13,7 +14,7 @@ class App extends React.Component  {
   return (
     <div >
 
-
+    <Age></Age>
     </div>
   );
 }
