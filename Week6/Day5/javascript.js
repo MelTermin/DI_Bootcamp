@@ -54,3 +54,28 @@ console.log('retrievedObject: ', retrievedList);
 form.reset()
 // }
 }
+
+let btn=document.getElementById("btn")
+
+btn.addEventListener("click", loadData)
+
+function loadData() {
+	console.log("clicked")
+
+	fetch("https://love-calculator.p.rapidapi.com/getPercentage?fname=John&sname=Alice", {
+		"method": "GET",
+		"headers": {
+			"x-rapidapi-host": "love-calculator.p.rapidapi.com",
+			"x-rapidapi-key": "69e6ee80c3msha0293102a2b1b69p10242djsnb05d1985bf4c"
+		}
+	})
+	.then((response) => response.json())
+	.then(
+	data => {
+	console.log(data)
+	 }
+	)
+	.catch(err => {
+		console.log(err);
+	});
+}
