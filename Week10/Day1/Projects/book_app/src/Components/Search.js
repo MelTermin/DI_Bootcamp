@@ -19,29 +19,15 @@ const Search = ({searchText,setSearchText,setBooks,books,sorting,setSorting})=> 
     })
   }
 
- 
-
-  // useEffect(() => {
-  //   let sortedBooks= books.sort((a,b) => {
-  //     if(sorting === 'Newest'){
-       
-  //       return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4));
-  //   }
-  //   else if(sorting === 'Oldest'){
-  //       return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedDate.substring(0, 4));
-  //   }
-  // 
-  //   })
-  // setBooks(sortedBooks)
-  // }, [setBooks]);
-  // console.log(sortedBooks)
 
   useEffect(() => {
     const sortedBooks = [...books];
-    console.log(sortedBooks)
-   
-  });
+    sortedBooks.sort (function (a,b) {
+      return parseInt(b.volumeInfo.publishedDate) - parseInt(a.volumeInfo.publishedDate)
 
+    })
+  setBooks(sortedBooks)
+  },[sorting]);
 
   return (
     <div>
@@ -49,8 +35,8 @@ const Search = ({searchText,setSearchText,setBooks,books,sorting,setSorting})=> 
       <button onClick= {handleSubmit}>Search</button>
       <select onChange= {handleSort}>
         <option disabled selected>Sort</option>
-        <option>Newest</option>
-        <option>Oldest</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
       </select>
       <BookList books= {books} setBooks= {setBooks}></BookList>
     </div>
