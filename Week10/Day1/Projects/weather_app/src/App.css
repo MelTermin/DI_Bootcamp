@@ -1,0 +1,50 @@
+.navbar {
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  min-height: 70px;
+  background: rgba(73, 79, 82);
+  color:white;
+}
+
+ul {
+  width: 50%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+  color: white;
+}
+
+.search-container {
+  margin:50px 650px;
+}
+.search-bar {
+  text-align: center;
+  width: 400px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+ 
+}
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+ 
+
+}
+
+.box {
+  width: 500px;
+  height: 200px;
+  border: 2px solid slateblue;
+  margin: 50px;
+
+}
