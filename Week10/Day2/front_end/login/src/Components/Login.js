@@ -1,8 +1,9 @@
-import React,{ useState } from 'react'
+import React,{ useState} from 'react'
 
 
 
 function Login() {
+
 
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
@@ -21,6 +22,7 @@ const handleRegistration= () => {
   .then(response => response.json())
   .then(userdata=>{
     console.log(userdata);
+  
   })
   .catch(e => {
     console.log(e);
