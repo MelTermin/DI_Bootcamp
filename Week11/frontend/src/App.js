@@ -3,7 +3,7 @@ import Register from './Components/Register';
 import Home from './Components/Home';
 import fire from './firebase';
 import './App.css';
-export const AppContext= React.createContext(null)
+
 
 function App() {
   const [user,setUser]=useState("")
@@ -88,7 +88,7 @@ const clearErrors =() => {
   return (
     <div >
   {user ? ( 
-   <AppContext.Provider value= {{firstName, handleLogout, email}}> <Home/> </AppContext.Provider> ): (
+   <Home firstName= {firstName} handleLogout= {handleLogout}/>  ): (
     
     <Register firstName= {firstName} lastName= {lastName} setFirstName= {setFirstName} setLastName= {setLastName}
     email= {email} password= {password}
