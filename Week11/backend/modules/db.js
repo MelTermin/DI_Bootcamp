@@ -22,7 +22,17 @@ const createTracker= (exercise,repetition,weight,duration) => {
   .returning('*')
 }
 
+const deleteTracker=(id) => {
+  return db('tracker')
+  .where({id:id})
+  .del()
+  .returning('*')
+
+}
+
 module.exports = {
  
-  createTracker:createTracker
+  createTracker:createTracker,
+  deleteTracker:deleteTracker
+  
 }

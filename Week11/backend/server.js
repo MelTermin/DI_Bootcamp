@@ -3,6 +3,7 @@ const bodyParser=require ('body-parser')
 const cors= require ('cors')
 const env=require('dotenv')
 const DB= require('../backend/modules/db')
+console.log(DB)
 
 const app=express()
 env.config();
@@ -19,6 +20,18 @@ DB.createTracker(req.body.exercise,req.body.repetition,req.body.weight,req.body.
 .catch(e => {
   res.send({message:'something went wrong'})
 })
+})
+
+app.delete ('/tracker/:id', (req,res) => {
+
+  DB.deleteTracker.parseInt(req.body.id)
+  .then(data => {
+    console.log(data);
+    res.send({message:'ok for the delete'})
+  })
+  .catch(e => {
+    res.send({message:'something went wrong'})
+  })
 })
 
 

@@ -1,7 +1,16 @@
 import React from 'react'
 
 function TrackerList(props) {
-  const {details}=props
+  const {details,setDetails}=props
+
+  const handleDelete= async (id) => {
+    console.log(id)
+    await fetch(`http://localhost:4000/tracker/${id}`, {
+      method:"DELETE"
+    })
+    const newList = details.filter((item) => item.id !== id);
+    setDetails(newList);
+  }
   return (
     <div>
       {
@@ -12,7 +21,7 @@ function TrackerList(props) {
             <p>{item.repetition} rep</p>
             <p>{item.weight} kg</p>
             <p>{item.duration} min</p>
-            <button>Edit</button>
+            <button onClick= {() =>handleDelete(item.id)}>Edit</button>
             <button>Delete</button>
           
           </div>)

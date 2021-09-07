@@ -13,16 +13,15 @@ const [weight,setWeight]=useState("")
 const [duration,setDuration]=useState("")
 const [details,setDetails]=useState([])
 
-const handleDetails= (e) => {
+const handleDetails= async (e) => {
   e.preventDefault()
   setDetails([...details, {
-    id:Math.floor(Math.random()*1000),
     exercise:exercise,
     repetition:repetition,
     weight:weight,
     duration:duration
   }])
-  fetch('http://localhost:4000/tracker',{
+  await fetch('http://localhost:4000/tracker',{
     method:'POST',
     headers: {
       'Content-type':'application/json'
