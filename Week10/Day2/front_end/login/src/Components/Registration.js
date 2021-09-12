@@ -5,7 +5,12 @@ function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+// const body= {exercise,repetition,weight,duration}
+//  setExercise("");
+//setRepition("");
+//setWeight("");
+//setDuration("")
+//http://localhost:4000/tracker
   const handleSubmit= () => {
     fetch('http://localhost:4000/register',{
       method: 'POST',
