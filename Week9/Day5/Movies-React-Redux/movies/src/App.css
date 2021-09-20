@@ -76,7 +76,7 @@
   width: 400px;
   height: 500px;
   border-radius: 10px;
-  margin: 50px 300px;
+  margin: 50px 200px;
  
 }
 .movie-poster img {
@@ -100,14 +100,14 @@
   border: 2px solid black;
   width: 1140px;
   height: 100px;
-  margin: 50px 300px;
+  margin: 50px 100px;
   border-radius: 10px;
  
 }
 
 .button-movie-links {
   display:flex;
-  margin: 20px 300px;
+  margin: 20px 100px;
 
 }
 .links-movie {
@@ -126,14 +126,14 @@
 }
 
 input {
-  width: 400px;
+  width: 200px;
   height: 30px;
  
  
 }
 
 .search-btn {
-  width: 200px;
+  width: 100px;
   height: 35px;
   background-color: #1b4a8b;
   border: none;
@@ -143,5 +143,5 @@ input {
 }
 
 form {
-  margin:40px 600px;
+  margin:40px 450px;
 }
