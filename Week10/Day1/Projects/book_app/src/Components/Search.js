@@ -30,7 +30,8 @@ const Search = ({searchText,setSearchText,setBooks,books,sorting,setSorting})=> 
   },[sorting]);
 
   return (
-    <div>
+    <div >
+      <div className="search-container">
       <input type="text" onChange= {(e) =>setSearchText(e.target.value)}></input>
       <button onClick= {handleSubmit}>Search</button>
       <select onChange= {handleSort}>
@@ -38,8 +39,12 @@ const Search = ({searchText,setSearchText,setBooks,books,sorting,setSorting})=> 
         <option value="newest">Newest</option>
         <option value="oldest">Oldest</option>
       </select>
-      <BookList books= {books} setBooks= {setBooks}></BookList>
     </div>
+    
+
+       <BookList books= {books} setBooks= {setBooks}></BookList>
+   
+   </div>
   )
   }
   
